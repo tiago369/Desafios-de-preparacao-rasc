@@ -1,7 +1,7 @@
 def median(a, b, c):
-    if(a > b and a > c):
+    if(c >= a >= b or b >= a >= c):
         return a
-    elif(b > a and b > c):
+    elif(c >= b >= a or a >= b >= c):
         return b
     else:
         return c
@@ -11,4 +11,4 @@ x = int(input('x: '))
 y = int(input('y: '))
 z = int(input('z: '))
 
-print(f'Tem como mediana {median(x,y,z)}')
+print(f'Esses valores tem como mediana {median(x,y,z)}')

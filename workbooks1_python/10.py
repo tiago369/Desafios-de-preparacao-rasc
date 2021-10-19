@@ -9,8 +9,8 @@ def reductFrac(numerator, denominator):
     
     return [int(numerator), int(denominator)]
 
-n = int(input('N: '))
-d = int(input('D: '))
+n = int(input('Put the numerator: '))
+d = int(input('Put the denominator: '))
 
 [x,y] = reductFrac(n,d)
 
