@@ -1,7 +1,8 @@
-import decimal
+from decimal import *
+getcontext().prec = 3
 
 def magicDate(day, mounth, year):
-    y = int((decimal(year/100) - int(year/100))*100)
+    y = int((Decimal(Decimal(year)/100) - int(year/100))*100)
     if(day * mounth == y):
         return True
     else: return False
