@@ -13,12 +13,9 @@ def music(verse):
             n = n - pos
             pos += 1
     estrofe = pos - 3
-    print(n)
-    print(pos)
-    print(estrofe)
 
     if(n == 1):
-        return 'The '+ days[estrofe-1] + ' day of Christmas,'
+        return 'The '+ days[estrofe] + ' day of Christmas,'
     elif(n == 2):
         return 'My true love sent to me'
     elif(n == 0 and estrofe == 1):
@@ -30,6 +27,5 @@ def music(verse):
         return x
 
 
-v = int(input('Digite o verso que deseja achar: '))
-
-print(music(v))
+for i in range(1, 13, 1):
+    print(music(i))
