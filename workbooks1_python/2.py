@@ -4,28 +4,32 @@ def music(verse):
     count = 0
     n = verse
     days = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh','twelfth']
-    vs1 = ['A partridge in a pear tree.','And partridge in a pear tree.','Two turtle doves','Two turtle doves','Three French hens,','Four colly birds,','Five gold rings,','Six geese a-laying,','Seven swans a-swimming,','Eight maids a-milking,','Nine drummers drumming,','Ten pipers piping,','Eleven ladies dancing,','Twelve fiddlers fiddling,']
-    while(n > pos):
+    vs3 = ['A partridge in a pear tree.','And partridge in a pear tree.']
+    vs2 = ['Twelve fiddlers fiddling,','Eleven ladies dancing,','Ten pipers piping,','Nine drummers drumming,','Eight maids a-milking,','Seven swans a-swimming,','Six geese a-laying,','Five gold rings,','Four colly birds,','Three French hens,','Two turtle doves']
+    
+    vs1 = ['Two turtle doves','Three French hens,','Four colly birds,','Five gold rings,','Six geese a-laying,','Seven swans a-swimming,','Eight maids a-milking,','Nine drummers drumming,','Ten pipers piping,','Eleven ladies dancing,','Twelve fiddlers fiddling,']
+    
+    while(n >= pos):
             n = n - pos
             pos += 1
-    estrofe = pos - 2
+    estrofe = pos - 3
+    print(n)
     print(pos)
     print(estrofe)
 
-    if(pos == 1):
-        return 'The '+ days(estrofe-1) + ' day of Christmas,'
-    elif(pos == 2):
+    if(n == 1):
+        return 'The '+ days[estrofe-1] + ' day of Christmas,'
+    elif(n == 2):
         return 'My true love sent to me'
-    elif(pos == 0 and estrofe == 1):
-        return days[11]
-    elif(pos == 0 and estrofe != 1):
-        return vs1[0]
+    elif(n == 0 and estrofe == 1):
+        return vs3[0]
+    elif(n == 0 and estrofe != 1):
+        return vs3[1]
     else:
-        for i in range(estrofe, 1, -1):
-            x = vs1[i]
+        x = vs2[11-estrofe + n-3]
         return x
 
 
-v = int(input('->'))
+v = int(input('Digite o verso que deseja achar: '))
 
 print(music(v))
