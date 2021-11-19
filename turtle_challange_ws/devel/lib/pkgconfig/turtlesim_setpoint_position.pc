@@ -1,0 +1,8 @@
+prefix=/home/tiago/Documents/projects/Desafios-de-preparacao-rasc/turtle_challange_ws/devel
+
+Name: turtlesim_setpoint_position
+Description: Description of turtlesim_setpoint_position
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
