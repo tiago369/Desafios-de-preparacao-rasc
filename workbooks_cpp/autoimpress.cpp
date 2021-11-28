@@ -3,8 +3,18 @@
 using namespace std;
 
 int main(){
-    std::fstream fs;
-    fs.open ("autoimpress.cpp", std::fstream::in | std::fstream::out | std::fstream::app);
+    fstream codigo;
+    string linha;
+
+    codigo.open ("autoimpress.cpp", fstream::in);
+
+    if(codigo.is_open()){
+        while(getline(codigo, linha)){
+            cout << linha << endl;
+        }
+    }
+
+    codigo.close();
 
     return 0;
 }
