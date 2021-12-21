@@ -1,0 +1,2 @@
+dobot
+-DCATKIN_DEVEL_PREFIX=/home/senai/tiago/dobot_magician/dobot_magician_ws/devel -DCMAKE_INSTALL_PREFIX=/home/senai/tiago/dobot_magician/dobot_magician_ws/install -G Unix Makefiles
