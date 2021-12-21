@@ -1,8 +1,0 @@
-prefix=/home/senai/tiago/dobot_magician/dobot_magician_ws/devel
-
-Name: dobot
-Description: Description of dobot
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
